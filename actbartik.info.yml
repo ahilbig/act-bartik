@@ -3,9 +3,8 @@ type: theme
 description: 'A subtheme of the default Bartik theme (flexible, recolorable theme with many regions).'
 core: 8.x
 base theme: bartik
-stylesheets:
-  - css/act-bartik.css
-  - css/colors.css
+libraries:
+  - actbartik/global-styling
 regions:
   header: Header
   help: Help

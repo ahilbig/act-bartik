@@ -1,0 +1,5 @@
+global-styling:
+  css:
+    theme:
+      - css/act-bartik.css: {}
+      - css/colors.css: {}
