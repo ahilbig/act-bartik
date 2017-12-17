@@ -1,6 +1,15 @@
 
 /* ---------- Color Module Styles ----------- */
 
+/* Act theater base colours:
+
+#header {
+  background-color: #a89482;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#b8a899), to(#a89482));
+  background-image: -moz-linear-gradient(-90deg, #b8a899, #a89482);
+}
+*/
+
 body {
   background-color: #2d1e0f;
   color: #ffffff;
@@ -9,7 +18,8 @@ html,
 #page-wrapper,
 body.overlay {
   background-color: #ffffff;
-  color: #3b3b3b;
+  /*color: #3b3b3b;*/
+  color: #ffffff;
 }
 #navigation ul.links li.active-trail a {
   background: #ffffff;
