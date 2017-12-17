@@ -1,2 +1,2 @@
-tar --exclude=".git*" --exclude="*.sh" -cvzf act-bartik.tgz .
+tar --exclude=".git*" --exclude="*.sh" --exclude="*.tgz" -C .. -cvzf act-bartik.tgz act-bartik
 
