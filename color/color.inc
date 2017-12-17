@@ -1,133 +1,130 @@
 <?php
 
-// Put the logo path into JavaScript for the live preview.
-drupal_add_js(array('color' => array('logo' => theme_get_setting('logo', 'bartik'))), 'setting');
+/**
+ * @file
+ * Lists available colors and color schemes for the Bartik theme.
+ */
 
-$info = array(
+$info = [
   // Available colors and color labels used in theme.
-  'fields' => array(
+  'fields' => [
+    'top' => t('Header background top'),
+    'bottom' => t('Header background bottom'),
     'bg' => t('Main background'),
-    'link' => t('Link color'),
-    'top' => t('Header top'),
-    'bottom' => t('Header bottom'),
-    'text' => t('Text color'),
     'sidebar' => t('Sidebar background'),
     'sidebarborders' => t('Sidebar borders'),
     'footer' => t('Footer background'),
     'titleslogan' => t('Title and slogan'),
-  ),
+    'text' => t('Text color'),
+    'link' => t('Link color'),
+  ],
   // Pre-defined color schemes.
-  'schemes' => array(
-    'default' => array(
+  'schemes' => [
+    'default' => [
       'title' => t('Blue Lagoon (default)'),
-      'colors' => array(
+      'colors' => [
+        'top' => '#055a8e',
+        'bottom' => '#1d84c3',
         'bg' => '#ffffff',
-        'link' => '#288CC9',
-        'top' => '#0779bf',
-        'bottom' => '#48a9e4',
-        'text' => '#3b3b3b',
         'sidebar' => '#f6f6f2',
         'sidebarborders' => '#f9f9f9',
-        'footer' => '#2d1e0f',
+        'footer' => '#292929',
         'titleslogan' => '#fffeff',
-      ),
-    ),
-    'Slate' => array(
-      'title' => t('Slate'),
-      'colors' => array(
-        'bg' => '#ffffff',
-        'link' => '#0073b6',
-        'top' => '#4a4a4a',
-        'bottom' => '#4e4e4e',
         'text' => '#3b3b3b',
-        'sidebar' => '#feffff',
-        'sidebarborders' => '#d0d0d0',
-        'footer' => '#161617',
-        'titleslogan' => '#fffeff',
-      ),
-    ),
-    'Firehouse' => array(
+        'link' => '#0071B3',
+      ],
+    ],
+    'firehouse' => [
       'title' => t('Firehouse'),
-      'colors' => array(
-        'bg' => '#ffffff',
-        'link' => '#d6121f',
+      'colors' => [
         'top' => '#cd2d2d',
-        'bottom' => '#cf3535',
-        'text' => '#3b3b3b',
-        'sidebar' => '#f1f1f1',
-        'sidebarborders' => '#c2c2c2',
+        'bottom' => '#d64e4e',
+        'bg' => '#ffffff',
+        'sidebar' => '#f1f4f0',
+        'sidebarborders' => '#ededed',
         'footer' => '#1f1d1c',
         'titleslogan' => '#fffeff',
-      ),
-    ),
-    'Plum' => array(
-      'title' => t('Plum'),
-      'colors' => array(
-        'bg' => '#fffdf7',
-        'link' => '#9d408d',
-        'top' => '#4c1c58',
-        'bottom' => '#593662',
-        'text' => '#301313',
-        'sidebar' => '#f8f3e7',
-        'sidebarborders' => '#e4e3d4',
-        'footer' => '#2C2C28',
-        'titleslogan' => '#fffeff',
-      ),
-    ),
-    'Ice' => array(
+        'text' => '#888888',
+        'link' => '#d6121f',
+      ],
+    ],
+    'ice' => [
       'title' => t('Ice'),
-      'colors' => array(
-        'bg' => '#ffffff',
-        'link' => '#019DBF',
+      'colors' => [
         'top' => '#d0d0d0',
         'bottom' => '#c2c4c5',
-        'text' => '#4A4A4A',
-        'sidebar' => '#feffff',
+        'bg' => '#ffffff',
+        'sidebar' => '#ffffff',
         'sidebarborders' => '#cccccc',
-        'footer' => '#24272c',
-        'titleslogan' => '#0b0b0b',
-      ),
-    ),
-  ),
+        'footer' => '#016b83',
+        'titleslogan' => '#000000',
+        'text' => '#4a4a4a',
+        'link' => '#019dbf',
+      ],
+    ],
+    'plum' => [
+      'title' => t('Plum'),
+      'colors' => [
+        'top' => '#4c1c58',
+        'bottom' => '#593662',
+        'bg' => '#fffdf7',
+        'sidebar' => '#edede7',
+        'sidebarborders' => '#e7e7e7',
+        'footer' => '#2c2c28',
+        'titleslogan' => '#ffffff',
+        'text' => '#301313',
+        'link' => '#9d408d',
+      ],
+    ],
+    'slate' => [
+      'title' => t('Slate'),
+      'colors' => [
+        'top' => '#4a4a4a',
+        'bottom' => '#4e4e4e',
+        'bg' => '#ffffff',
+        'sidebar' => '#ffffff',
+        'sidebarborders' => '#d0d0d0',
+        'footer' => '#161617',
+        'titleslogan' => '#ffffff',
+        'text' => '#3b3b3b',
+        'link' => '#0073b6',
+      ],
+    ],
+  ],
 
   // CSS files (excluding @import) to rewrite with new color scheme.
-  'css' => array(
+  'css' => [
     'css/colors.css',
-  ),
+  ],
 
   // Files to copy.
-  'copy' => array(
-    'logo.png',
-  ),
+  'copy' => [
+    'logo.svg',
+  ],
 
   // Gradient definitions.
-  'gradients' => array(
-    array(
+  'gradients' => [
+    [
       // (x, y, width, height).
-      'dimension' => array(0, 0, 0, 0),
+      'dimension' => [0, 0, 0, 0],
       // Direction of gradient ('vertical' or 'horizontal').
       'direction' => 'vertical',
       // Keys of colors to use for the gradient.
-      'colors' => array('top', 'bottom'),
-    ),
-  ),
-
-  // Color areas to fill (x, y, width, height).
-  'fill' => array(),
-
-  // Coordinates of all the theme slices (x, y, width, height)
-  // with their filename as used in the stylesheet.
-  'slices' => array(),
-
-  // Reference color used for blending. Matches the base.png's colors.
-  'blend_target' => '#ffffff',
+      'colors' => ['top', 'bottom'],
+    ],
+  ],
 
   // Preview files.
-  'preview_image' => 'color/preview.png',
-  'preview_css' => 'color/preview.css',
-  'preview_js' => 'color/preview.js',
+  'preview_library' => 'bartik/color.preview',
   'preview_html' => 'color/preview.html',
 
-  // Base file for image generation.
-  'base_image' => 'color/base.png',
-);
+  // Attachments.
+  '#attached' => [
+    'drupalSettings' => [
+      'color' => [
+        // Put the logo path into JavaScript for the live preview.
+        'logo' => theme_get_setting('logo.url', 'bartik'),
+      ],
+    ],
+  ],
+];

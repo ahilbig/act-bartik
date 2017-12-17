@@ -1,5 +1,9 @@
 global-styling:
+  version: VERSION
   css:
+    base:
+      version: VERSION
     theme:
-      - css/act-bartik.css: {}
-      - css/colors.css: {}
+      css/colors.css: {}
+      css/print.css: { media: print }
+      css/act-bartik.css
