@@ -1,4 +1,4 @@
-# act-bartik
+# Act-Bartik drupal theme
 sub theme for the drupal theme "bartik" for acttheater.de
 
 Use mk.sh to zip the theme and upload it using the drupal ui.
